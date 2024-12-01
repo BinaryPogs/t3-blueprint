@@ -38,17 +38,7 @@ npm install
 cp .env.example .env
 ```
 
-4. Update the following variables in your `.env`:
-
-```
-# Clerk
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
-CLERK_SECRET_KEY=your_secret_key
-CLERK_WEBHOOK_SECRET=your_webhook_secret
-
-# Database
-DATABASE_URL="postgresql://user:password@localhost:5432/your_database"
-```
+4. Update the variables in your `.env`:
 
 5. Initialize Prisma and run migrations:
 
@@ -65,8 +55,6 @@ npx prisma db push
 4. Set the endpoint URL to: `<your-domain>/api/webhook/clerk`
 5. Select the following events:
    - user.created
-   - user.updated
-   - user.deleted
 
 ### Local Development with Webhook
 
@@ -145,8 +133,76 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Contributing
 
-[Add your contribution guidelines here]
+We welcome contributions to improve this T3 blueprint project! Here's how you can help:
+
+### How to Contribute
+
+1. **Fork the Repository**
+
+   - Fork the repo to your GitHub account
+   - Clone your fork locally
+
+2. **Create a Branch**
+
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. **Make Your Changes**
+
+   - Write clear, concise commit messages
+   - Keep changes focused and atomic
+   - Add tests if applicable
+   - Update documentation as needed
+
+4. **Code Style**
+
+   - Follow the existing code style
+   - Use TypeScript strict mode
+   - Run `npm run lint` before committing
+   - Ensure all tests pass with `npm run test`
+
+5. **Submit a Pull Request**
+   - Push your changes to your fork
+   - Submit a PR with a clear title and description
+   - Reference any relevant issues
+   - Wait for review and address any feedback
+
+### Development Guidelines
+
+- Keep the blueprint simple and maintainable
+- Avoid adding opinionated features
+- Document any new features or changes
+- Ensure backwards compatibility
+- Test your changes thoroughly
+
+### Bug Reports
+
+- Use the GitHub Issues tab
+- Include steps to reproduce
+- Specify your environment details
+- Provide error messages if any
 
 ## License
 
-[Add your license information here]
+MIT License
+
+Copyright (c) 2024 [Your Name]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
